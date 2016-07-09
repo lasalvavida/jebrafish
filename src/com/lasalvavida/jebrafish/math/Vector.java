@@ -1,4 +1,4 @@
-package com.lasalvavida.javacv.math;
+package com.lasalvavida.jebrafish.math;
 
 public class Vector<T extends Number> extends Point {
     public Vector(T ... elements) {

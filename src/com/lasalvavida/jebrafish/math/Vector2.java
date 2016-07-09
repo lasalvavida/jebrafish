@@ -1,4 +1,4 @@
-package com.lasalvavida.javacv.math;
+package com.lasalvavida.jebrafish.math;
 
 public class Vector2<T extends Number> extends Vector {
     public static Vector2<Double> UNIT_I = new Vector2(1.0, 0.0);

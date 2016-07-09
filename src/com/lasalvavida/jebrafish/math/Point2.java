@@ -1,4 +1,4 @@
-package com.lasalvavida.javacv.math;
+package com.lasalvavida.jebrafish.math;
 
 public class Point2<T extends Number> extends Point {
     public static Point2<Double> ORIGIN = new Point2(0.0, 0.0);

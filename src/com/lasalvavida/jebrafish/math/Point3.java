@@ -1,4 +1,4 @@
-package com.lasalvavida.javacv.math;
+package com.lasalvavida.jebrafish.math;
 
 /**
  * Created by Rob on 7/6/2016.

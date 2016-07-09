@@ -1,4 +1,4 @@
-package com.lasalvavida.javacv.math;
+package com.lasalvavida.jebrafish.math;
 
 public class Point<T extends Number> {
     protected T[] elements;

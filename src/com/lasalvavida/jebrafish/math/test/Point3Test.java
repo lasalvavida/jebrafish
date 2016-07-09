@@ -1,6 +1,6 @@
-package com.lasalvavida.javacv.math.test;
+package com.lasalvavida.jebrafish.math.test;
 
-import com.lasalvavida.javacv.math.Point3;
+import com.lasalvavida.jebrafish.math.Point3;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
