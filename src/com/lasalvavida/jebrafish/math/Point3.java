@@ -1,8 +1,5 @@
 package com.lasalvavida.jebrafish.math;
 
-/**
- * Created by Rob on 7/6/2016.
- */
 public class Point3<T extends Number> extends Point {
     public static Point3<Double> ORIGIN = new Point3(0.0, 0.0, 0.0);
 

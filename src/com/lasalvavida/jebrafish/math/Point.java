@@ -18,6 +18,8 @@ public class Point<T extends Number> {
         return elements;
     }
 
+    public T get(int index) { return elements[index]; }
+
     public Point<T> clone() {
         return new Point<T>(elements);
     }
