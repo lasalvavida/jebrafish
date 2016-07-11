@@ -1,6 +1,8 @@
 package com.lasalvavida.jebrafish.math.test;
 
+import com.lasalvavida.jebrafish.math.Kernel;
 import com.lasalvavida.jebrafish.math.Matrix;
+import com.lasalvavida.jebrafish.math.MatrixD;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -54,7 +56,8 @@ public class MatrixTest {
         assertTrue("swapRows correctly swaps rows", original.equals(swapped));
     }
 
-    @Test public void determinant() {
+    @Test
+    public void determinant() {
         Matrix<Integer> nonSquare = new Matrix<>(3, 2);
         boolean threwException = false;
         try {
@@ -93,5 +96,15 @@ public class MatrixTest {
                 -8, -2, -20, -18, -4);
         double determinant5x5 = test5x5.determinant();
         assertTrue("determinant calculated correctly for 5x5 matrix", determinant5x5 == 4925712.0);
+    }
+
+    @Test
+    public void boxBlur() {
+        MatrixD random5x5 = MatrixD.random(5, 5, 0.0, 1.0);
+        MatrixD accBoxBlur = random5x5.clone();
+        accBoxBlur.boxBlur(3);
+        MatrixD kernelBoxBlur = random5x5.clone();
+        kernelBoxBlur.convolve(Kernel.BOX3);
+        assertTrue("kernel and accumulated box blur produce the same result", accBoxBlur.equalsEpsilon(kernelBoxBlur, 1e-6));
     }
 }

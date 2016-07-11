@@ -7,11 +7,11 @@ public class Matrix<T extends Number> {
     public Matrix(int rows, int columns, T ... elements) {
         this.rows = rows;
         this.columns = columns;
-        this.elements = elements;
-    }
-
-    public Matrix(int rows, int columns) {
-        this(rows, columns, (T[])new Number[rows * columns]);
+        if (elements.length == 0) {
+            this.elements = (T[])new Number[rows * columns];
+        } else {
+            this.elements = elements;
+        }
     }
 
     public Matrix(int rows, int columns, T value) {
@@ -48,6 +48,10 @@ public class Matrix<T extends Number> {
 
     public int getColumns() {
         return columns;
+    }
+
+    public T[] getElements() {
+        return elements;
     }
 
     public void fill(T value) {
